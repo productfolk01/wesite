@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aboardhr</title>
+
+  <!-- Use Inter or the same font as aboardhr -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+  <style>
+    /* ========== Base & Reset ========== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #111;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: #fff;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* ========== Navbar ========== */
+    .navbar {
+      width: 100%;
+      padding: 1rem 2rem;
+    }
+    .navbar .navbar-brand img {
+      height: 40px;
+      object-fit: contain;
+    }
+    .navbar-brand {
+      margin-left: 175px;
+
+    }
+    
+
+    /* ========== Main container to constrain width ========== */
+    .container-main {
+      width: 100%;
+      max-width: 1140px;
+      padding: 0 1rem;
+    }
+
+    /* ========== Hero / Header Section ========== */
+    .head {
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      padding: 24px;
+    }
+    .head h2 {
+      font-size: 60px;
+      font-weight: 800;
+      
+      color: #080909;  /* example brand blue */
+    }
+    .head p {
+      font-size: 1.125rem;
+      color: #444;
+      
+      max-width: 680px;
+    }
+    .button-group {
+      display: inline-flex;
+      
+    }
+    .button-group .btn {
+      
+      font-size: 1rem;
+      border-radius: 8px;
+    }
+    .btnnav{
+      margin-left: 175px;
+    }
+
+    /* ========== Image Hero ========== */
+    .img-section {
+      margin: 80px 0;
+    }
+
+    /* ========== Icon / Feature Section ========== */
+    .icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 80px;
+      margin-bottom: 80px;
+    }
+    .icon-container div {
+      max-width: 160px;
+      text-align: center;
+    }
+    .icon-container img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 16px;
+    }
+    .icon-container p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    /* ========== Text / Section ========== */
+    .text {
+      margin: 80px 0;
+      text-align: center;
+    }
+    .text p:first-of-type {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .text h2 {
+      font-size: 2rem;
+      margin-bottom: 24px;
+      color: #111;
+    }
+    .text .sty p {
+      font-size: 1.125rem;
+      max-width: 720px;
+      margin: 0 auto 32px;
+      color: #555;
+      line-height: 1.7;
+    }
+    .text button {
+      font-size: 1rem;
+      padding: 0.75rem 1.75rem;
+    }
+    .btn-primary{
+      margin-right: 200px;
+
+    }
+
+    /* ========== Icon Columns ========== */
+    .icon-columns {
+      margin-bottom: 80px;
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+    }
+    .icon-columns .col-auto {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    /* ========== Sc Section (image) ========== */
+    .sc {
+      margin-bottom: 80px;
+    }
+
+    /* ========== Culture / “can” Section ========== */
+    .can {
+      
+    
+    }
+    .can p:first-of-type {
+      font-size: 1rem;
+      color: #666;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    .can h2 {
+      font-size: 2rem;
+      margin-bottom: 24px;
+    }
+    .can p:last-of-type {
+      font-size: 1.125rem;
+      max-width: 720px;
+      margin: 0 auto 32px;
+      color: #555;
+      line-height: 1.7;
+    }
+    .can button {
+      font-size: 1rem;
+      padding: 0.75rem 1.75rem;
+    }
+
+    /* ========== Card Grid ========== */
+    .card-grid {
+      margin-bottom: 80px;
+    }
+
+    /* ========== Footer ========== */
+    .footer1 {
+      margin: 80px 0 40px;
+    }
+    .footer1 .footer-row {
+      display: flex;
+      justify-content: center;
+      gap: 120px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .footer1 .footer-row > div {
+      text-align: left;
+    }
+    .footer1 .footer-row p {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .footer1 .footer-row ul {
+      list-style: none;
+    }
+    .footer1 .footer-row ul li {
+      margin-bottom: 12px;
+      font-size: 1rem;
+      color: #555;
+    }
+    .footer-bottom {
+      border-top: 1px solid #eee;
+      padding: 24px 0;
+      font-size: 0.875rem;
+      color: #777;
+    }
+
+    /* ========== Responsive ========== */
+    @media (max-width: 992px) {
+      .icon-container {
+        flex-direction: column;
+        gap: 40px;
+      }
+      .icon-columns {
+        flex-direction: column;
+        gap: 40px;
+      }
+      .footer1 .footer-row {
+        gap: 40px;
+      }
+    }
+    @media (max-width: 576px) {
+      .head h2 {
+        font-size: 2.25rem;
+      }
+      .head p {
+        font-size: 1rem;
+      }
+      .text h2, .can h2 {
+        font-size: 1.75rem;
+      }
+      .text .sty p, .can p:last-of-type {
+        font-size: 1rem;
+      }
+      .button-group {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand icon" href="#">
+        <img src="Aseets/Screenshot 2025-10-15 132842.png" alt="Logo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Price</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+        </ul>
+        <a class="btn btn-primary  btnnav" href="#" role="button" style="background-color: rgb(154, 157, 161); border: none; margin-left: 200px;">
+          Sign In
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div style="width: 1520.8px;height: 43px;" class="container">
+
+  </div>
+
+  <div class="container-main">
+    <div class="head">
+      <h2>Bring joy to your workplace.</h2>
+      <br>
+      <div class="para">
+      <p>Take care of the everyday moments that shape how your team works,connects and grows.</p>
+      </div>
+      <div class="button-group">
+        <button type="button" class="btn btn-primary btn-lg">Book a demo</button>
+        <button type="button" class="btn btn-outline-primary btn-lg">Try for free</button>
+      </div>
+    </div>
+
+    <div class="img-section">
+      <img src="Aseets/OAfFV1qg6kFwEfYQu3EMYzDu8EE.jpg" alt="Hero Image">
+    </div>
+
+    <div class="head">
+      <h2>Built for people, <img src="uueZ7ykrYjwPdZTJmk6qMmNeOBQ.avif" alt=""> not just the process around them.</h2>
+    </div>
+
+    <div class="icon-container">
+      <div>
+        <img src="aseets/sunny_snowing_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Icon 1">
+        <p>Easy to use from day one</p>
+      </div>
+      <div>
+        <img src="aseets/sunny_snowing_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Icon 2">
+        <p>Designed to bring teams together.</p>
+      </div>
+      <div>
+        <img src="aseets/sunny_snowing_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Icon3">
+        <p>Made to grow with your company</p>
+      </div>
+    </div>
+
+    <div>
+      <p  style="color: rgb(188, 60, 188);">Everyday HR</p>
+      <h2> All the basics, done beautifully.</h2>
+      <div class="sty">
+        <p>From time off to contracts, Aboard takes care of the everyday stuff without feeling like work. It’s everything your team needs to stay organized and supported — without the usual friction</p>
+      </div>
+      <button style="margin-left: 17%;" type="button" class="btn btn-primary btn-lg">Learn more</button>
+    </div>
+    <br><br><br>
+
+    <div class="icon-columns">
+      <div class="col-auto d-flex flex-column align-items-center gap-3">
+        <img src="aseets/icon1.png" alt="Icon 1">PEOPLE DIRECTORY
+        <img src="aseets/icon1.png" alt="Icon 2">EXPENSES
+        <img src="aseets/icon1.png" alt="Icon 3">CONTRACTS & DOCUMENTS
+
+      </div>
+      <div class="col-auto d-flex flex-column align-items-center gap-3">
+        <img src="aseets/icon1.png" alt="Icon 4">ONBOARDING & OFFBOARDING
+        <img src="aseets/icon1.png" alt="Icon 5">TIME OFF
+
+
+      </div>
+    </div>
+
+    <div class="sc">
+      <img class="a" src="aseets/image3.jpg" alt="">
+    </div>
+
+    <div class="can">
+      <p style="color: rgb(243, 105, 55)">Team culture</p>
+      <h2 style=" font-size: 2.75rem;
+      font-weight: 600;
+      margin-bottom: color: #121314;">Belong together.</h2>
+      <p>Stay connected, celebrate moments, and create a culture where people feel seen and included — no matter where they work</p>
+      <button  style="margin-left: 175px;"    type="button" class="btn btn-primary btn-lg">Learn more</button>
+    </div>
+
+    <div class="card-grid">
+      <div class="row g-3">
+        <div class="col-6"><img src="Aseets/card2.jpg" class="img-fluid rounded" alt=""></div>
+        <div class="col-6"><img src="Aseets/card2.jpg" class="img-fluid rounded" alt=""></div>
+        <div class="col-6"><img src="Aseets/card2.jpg" class="img-fluid rounded" alt=""></div>
+        <div class="col-6"><img src="Aseets/card2.jpg" class="img-fluid rounded" alt=""></div>
+      </div>
+    </div>
+
+  <div class="sc">
+    <img class="a" src="aseets/imgl.jpg">
+</div>
+
+
+
+    <div class="head mb-5">
+      <h2>Ready to get started</h2>
+      <h2>Launch in less than a week.</h2>
+    </div>
+
+    <div class="icon-container bel mb-5">
+      <div>
+        <img src="aseets/sunny_snowing_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Icon 1">
+        <p>Easy to use from day one</p>
+      </div>
+      <div>
+        <img src="aseets/sunny_snowing_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Icon 2">
+        <p>Designed to bring teams together.</p>
+      </div>
+      <div>
+        <img src="aseets/sunny_snowing_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Icon 3">
+        <p>Made to grow with your company</p>
+      </div>
+    </div>
+
+
+    
+   
+
+    <div class="footer1">
+      <div class="footer-row">
+        <div>
+          <p>Smooth sailing.</p>
+          <ul>
+            <li>Prices</li>
+            <li>What's new</li>
+            <li>Help center</li>
+          </ul>
+        </div>
+        <div>
+          <p>Legal</p>
+          <ul>
+            <li>Privacy Policy</li>
+            <li>Terms and Conditions</li>
+            <li>Data Protection</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Aboard. All Rights Reserved.</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
